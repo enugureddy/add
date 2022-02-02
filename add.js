@@ -2,7 +2,7 @@ var express = require('express')
 var bodyparser = require('body-parser')
 const formidable = require('formidable')
 const fs = require('fs')
-
+var port= process.env.PORT|| 3005
 
 var app = express() //server 
 
@@ -40,6 +40,6 @@ app.post("/",function(req,res){
  res.send("invalid action")
  }
 })
-app.listen(3005, function(){
+app.listen(port, function(){
 console.log("server iniitated on 3005")
 }) 
